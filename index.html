@@ -1,1 +1,40 @@
-Hola mundo
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcula tu peso Space</title>
+</head>
+<body>
+	<h1>Calcula tu peso en el espacio</h1>
+	<p>En la tierra pesas distinto que en Marte o en Júpiter</p>
+
+<script type="text/javascript">
+	var usuario = prompt("¿Cual es tu peso?");
+	var planeta = parseInt(prompt("Escribe tu planeta \n 1 Para Marte \n 2 Para Júpiter"));
+	var peso = parseInt(usuario);
+	var tierra = 9.8;
+	var marte = 3.7;
+	var jupiter = 24.8;
+	var nombre;
+	var peso_final;
+
+	if (planeta == 1)
+	{
+		peso_final = peso * marte / tierra;
+		nombre = "Marte";
+	}
+	else if(planeta == 2)
+	{
+		peso_final = peso * jupiter / tierra;
+		nombre = "Júpiter";
+	}
+	else
+	{
+		peso_final = 152400000;
+		nombre = "Krypton";
+	}
+	peso_final = parseInt(peso_final);
+	document.write("Tu peso en el planeta " + nombre + " es de <strong>" + peso_final + " Kilos </strong>");
+</script>
+
+</body>
+</html>
